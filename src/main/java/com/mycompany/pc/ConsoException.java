@@ -4,10 +4,7 @@
  */
 package com.mycompany.pc;
 
-/**
- *
- * @author FAROUK
- */
+
 public class ConsoException extends Exception {
      public ConsoException(String message) {
         super(message);

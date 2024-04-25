@@ -4,10 +4,7 @@
  */
 package com.mycompany.pc;
 
-/**
- *
- * @author FAROUK
- */
+
 public class UC {
      double fréquence;
      int capacite;

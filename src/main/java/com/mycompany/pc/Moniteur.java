@@ -4,10 +4,7 @@
  */
 package com.mycompany.pc;
 
-/**
- *
- * @author FAROUK
- */
+
 public class Moniteur extends type{
     
      double classeConsommation;

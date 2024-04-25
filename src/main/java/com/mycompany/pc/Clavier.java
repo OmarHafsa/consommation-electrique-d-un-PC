@@ -4,10 +4,7 @@
  */
 package com.mycompany.pc;
 
-/**
- *
- * @author FAROUK
- */
+
  public class Clavier extends type {
        int nbTouches;
        double puissance;

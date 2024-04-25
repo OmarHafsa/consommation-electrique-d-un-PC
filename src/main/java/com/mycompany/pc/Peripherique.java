@@ -4,10 +4,7 @@
  */
 package com.mycompany.pc;
 
-/**
- *
- * @author FAROUK
- */
+
 public class Peripherique {
         public type[] peripheriques;
         int taille;

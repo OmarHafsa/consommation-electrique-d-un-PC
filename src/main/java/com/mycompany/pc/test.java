@@ -4,10 +4,6 @@
  */
 package com.mycompany.pc;
 
-/**
- *
- * @author FAROUK
- */
 public class test {
 
     /**
