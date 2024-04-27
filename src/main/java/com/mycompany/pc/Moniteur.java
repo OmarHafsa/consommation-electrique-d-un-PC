@@ -5,11 +5,10 @@
 package com.mycompany.pc;
 
 
-public class Moniteur extends type{
-    
-     double classeConsommation;
-     int dimension;
-     int resolutionMax;
+class Moniteur extends Peripherique {
+    int classeConsommation;
+    int dimension;
+    int resolutionMax;
 
     public Moniteur(int id, String modele, int classeConsommation, int dimension, int resolutionMax) {
         super(id, modele);
@@ -17,6 +16,7 @@ public class Moniteur extends type{
         this.dimension = dimension;
         this.resolutionMax = resolutionMax;
     }
+
     public double calculerPuissance() {
         return (classeConsommation * dimension + resolutionMax * 0.015);
     }

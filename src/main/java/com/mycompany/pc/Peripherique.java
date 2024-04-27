@@ -5,30 +5,17 @@
 package com.mycompany.pc;
 
 
-public class Peripherique {
-        public type[] peripheriques;
-        int taille;
-        static int index = 0;
+class Peripherique {
+    int id;
+    String modele;
 
-    public Peripherique(int taille) {
-        this.taille = taille;
-        this.peripheriques = new type[this.taille];
+    public Peripherique(int id, String modele) {
+        this.id = id;
+        this.modele = modele;
     }
 
-    public void addPeripherique(type tmp) {
-            if (index < this.taille) {
-                peripheriques[index] = tmp;
-                index++;
-            } else {
-                System.out.println("Le tableau est plein\n");
-            }
-    }
-
-    public double puissance_total() {
-        double somme = 0;
-        for (int i = 0; i < taille; i++) {
-            somme += peripheriques[i].CalculerPuissance();
-        }
-        return somme;
+    
+    public double calculerPuissance() {
+        return 0; // Par défaut, la puissance des périphériques est nulle
     }
 }

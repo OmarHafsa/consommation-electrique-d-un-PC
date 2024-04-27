@@ -5,26 +5,17 @@
 package com.mycompany.pc;
 
 public class test {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-        UC uc = new UC(10.2, 8, 120); 
-
-        Clavier clavier1 = new Clavier(1, "Clavier sans fil", 102, 5); 
-        Moniteur moniteur1 = new Moniteur(2, "Moniteur Full HD", 2, 18, 1700); 
-        Peripherique peripheriques = new Peripherique(2); 
-        peripheriques.addPeripherique(clavier1);
-        peripheriques.addPeripherique(moniteur1);
+        UC uc = new UC(10.2, 8, 10);
+        Clavier clavier = new Clavier(1, "Clavier", 102, 5);
+        Moniteur moniteur = new Moniteur(2, "Moniteur", 2, 18, 1700);
+        Peripherique[] peripheriques = {clavier, moniteur};
         PC pc0 = new PC(uc, peripheriques);
         try {
             double consommation = pc0.calConsoElec(5);
-            System.out.println("La consommation electrique pour PC0 est de " + consommation + " watts");
+            System.out.println("La consommation électrique pour PC0 est de " + consommation + " watts.");
         } catch (ConsoException e) {
             System.out.println(e.getMessage());
         }
-   
-    }}
-
+    }
+}

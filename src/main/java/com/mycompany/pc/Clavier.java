@@ -5,16 +5,17 @@
 package com.mycompany.pc;
 
 
- public class Clavier extends type {
-       int nbTouches;
-       double puissance;
-       
-     public Clavier(int id, String modele, int nbTouches, double puissance) {
+class Clavier extends Peripherique {
+    int nbTouches;
+    double puissance;
+
+    public Clavier(int id, String modele, int nbTouches, double puissance) {
         super(id, modele);
         this.nbTouches = nbTouches;
         this.puissance = puissance;
     }
-     public double calculerPuissance() {
+
+    public double calculerPuissance() {
         return puissance;
     }
 }

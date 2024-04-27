@@ -5,24 +5,34 @@
 package com.mycompany.pc;
 
 
-public class PC {
-      UC uc;
-     Peripherique peripherique;
+class PC {
+    UC uc;
+    Peripherique[] peripheriques;
 
-    public PC(UC uc, Peripherique peripheriques) {
+    public PC(UC uc, Peripherique[] peripheriques) {
         this.uc = uc;
-        this.peripherique = peripheriques;
+        this.peripheriques = peripheriques;
     }
-  
-        public double calConsoElec(int Duree) throws ConsoException {
-        double puiss;
-        double consumation;
-        puiss = uc.calculerPuissance() + peripherique.puissance_total();
-        consumation = puiss * Duree;
-        if (consumation > 1000) {
-            throw new ConsoException("la consomation a depassé 1000 watts");
+
+    public PC(PC pc) {
+        this.uc = pc.uc;
+        this.peripheriques = pc.peripheriques;
+    }
+    public double PuissanceTotalePer() {
+        double puissanceTotale = 0;
+        for (Peripherique p : peripheriques) {
+            puissanceTotale += p.calculerPuissance();
+        }
+        return puissanceTotale;
+    }
+    public double calConsoElec(int duree) throws ConsoException {
+        double puissanceTotale=PuissanceTotalePer();
+        double puiss = uc.calculerPuissance()+puissanceTotale;
+        double consommation = puiss * duree;
+        if (consommation > 1000) {
+            throw new ConsoException("La consommation a dépassé 1000 watts.");
         } else {
-            return consumation;
+            return consommation;
         }
     }
 }

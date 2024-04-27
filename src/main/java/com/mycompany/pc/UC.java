@@ -5,12 +5,13 @@
 package com.mycompany.pc;
 
 
-public class UC {
-     double fréquence;
-     int capacite;
-     double puissance;
-     public UC(double fréquence, int capacite, double puissance) {
-        this.fréquence = fréquence;
+class UC {
+    double frequence;
+    int capacite;
+    double puissance;
+
+    public UC(double frequence, int capacite, double puissance) {
+        this.frequence = frequence;
         this.capacite = capacite;
         this.puissance = puissance;
     }
@@ -19,4 +20,5 @@ public class UC {
         return puissance;
     }
 }
+
 
